@@ -9,18 +9,17 @@ function SignUpForm({setUser}) {
     lastName: "",
     email: "",
     password: "",
-    confirm: "",
     error: "",
   });
 
-  const disable = formData.password !== formData.confirm;
 
   const handleSubmit = async (e) => { 
     e.preventDefault(); 
     try {
       // console.log(formData)
       const userData = { // data to be send to the backend to create a new user
-        name: formData.name,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
         email: formData.email,
         password: formData.password,
       };
@@ -38,11 +37,11 @@ function SignUpForm({setUser}) {
   };
 
   return (
-    <div className={styles.signup_container}>
-      <div className={styles.signup_form_container}>
+    <div className={styles.signUp_container}>
+      <div className={styles.signUp_form_container}>
         <div className={styles.left}>
-          <h1>Welcome Back</h1>
-          <Link to="/login">
+          <h1>Welcome to Connectify</h1>
+          <Link to="/users/login">
             <button type="button" className={styles.white_btn}>
               Sign in
             </button>
@@ -88,14 +87,13 @@ function SignUpForm({setUser}) {
               className={styles.input}
             />
             {formData.error && (
-              <div className={styles.error_msg}>{formData.error}</div>
+              <h4>{formData.error}</h4>
             )}
             <button
               type="submit"
               className={styles.green_btn}
-              disabled={disable}
             >
-              Sing Up
+              Sign Up
             </button>
           </form>
         </div>

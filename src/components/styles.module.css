@@ -1,4 +1,4 @@
-.signup_container {
+.signUp_container {
 	width: 100%;
 	min-height: 100vh;
 	background-color: #f5f5f5;
@@ -7,13 +7,16 @@
 	justify-content: center;
 }
 
-.signup_form_container {
+.signUp_form_container {
 	width: 900px;
 	height: 500px;
 	display: flex;
 	border-radius: 10px;
 	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
 		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+@media screen {
+    
 }
 
 .left {
@@ -25,6 +28,8 @@
 	background-color: #3bb19b;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
 }
 
 .left h1 {
@@ -43,6 +48,8 @@
 	background-color: white;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
 }
 
 .form_container {
@@ -80,6 +87,7 @@
 
 .white_btn,
 .green_btn {
+    color:#3bb19b;
 	border: none;
 	outline: none;
 	padding: 12px 0;
