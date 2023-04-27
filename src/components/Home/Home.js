@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./styles.module.css";
-import { logOut } from "../utilities/users-service";
+import { logOut } from "../../utilities/users-service";
 
 const Home = ({user, setUser}) => {
     const handleLogOut = () => {
@@ -11,7 +11,9 @@ const Home = ({user, setUser}) => {
   return (
     <div className={styles.main_container}>
       <nav className={styles.navbar}>
-        <h1>Connectify</h1>
+        <h1>
+          Connectify <span>Welcome, {user.firstName}</span>
+        </h1>
         <button className={styles.white_btn} onClick={handleLogOut}>
           Logout
         </button>

@@ -1,11 +1,8 @@
 import {useState} from 'react';
-
-import { Routes, Route } from 'react-router-dom';
-
-import NewOrderPage from './pages/NewOrderPage';
-import AuthPage from './pages/AuthPage';
-import OrderHistoryPage from './pages/OrderHistoryPage';
-import NavBar from './components/NavBar';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import LoginForm from './components/Login/LogInForm';
+import SignUpForm from './components/SignUp/SignUpForm';
+import Home from './components/Home/Home';
 
 import { getUser } from './utilities/users-service';
 
@@ -15,19 +12,22 @@ function App() {
   const [user, setUser] = useState(getUser());
 
   return (
-    <main className="App">
-     { user ? 
-      <>
-      <NavBar user={user} setUser={setUser}/>
+    <>
       <Routes>
-        <Route path='/orders/new' element={ <NewOrderPage /> }/>
-        <Route path='/orders' element={ <OrderHistoryPage /> }/>
+        {user ? (
+          <>
+            <Home user={user} setUser={setUser} />
+          </>
+        ) : (
+          <>
+            <Route path="/api/users" element={<SignUpForm setUser={setUser} />} />
+            <Route path="/api/users/login" exact element={<LoginForm setUser={setUser} />} />
+            <Route path="/" exact element={<Navigate replace to="/api/users/login" />}
+            />
+          </>
+        )}
       </Routes>
-      </>
-     : 
-      <AuthPage setUser={setUser}/>
-      }
-    </main>
+    </>
   );
 }
 

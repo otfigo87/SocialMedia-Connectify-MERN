@@ -2,6 +2,8 @@ import { useState } from 'react';
 import {login} from '../../utilities/users-service';
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
+
+
 export default function LoginForm({ setUser }) {
 
 const [credentials, setCredentials] = useState({
@@ -36,6 +38,7 @@ return (
     <div className={styles.login_form_container}>
       <div className={styles.left}>
         <form className={styles.form_container} onSubmit={handleSubmit}>
+          <h2>Connectify</h2>
           <h1>Login to Your Account</h1>
           <input
             type="email"
@@ -63,7 +66,7 @@ return (
       </div>
       <div className={styles.right}>
         <h1>New Member ?</h1>
-        <Link to="/">
+        <Link to="/api/users">
           <button type="button" className={styles.white_btn}>
             Sign Up
           </button>
