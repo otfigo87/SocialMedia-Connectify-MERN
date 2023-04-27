@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path'); // node module
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cors = require('cors');
 
 const app = express();
 // development port: 3001
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 3001;
 
 
 //* Config
+app.use(cors())//enable CORS and allow requests from different origins
 // Logger middleware
 app.use(logger('dev'));
 // JSON payload middleware (for data coming from frontend functions)
@@ -29,7 +31,7 @@ app.use('/api/users', require('./routes/api/users'));
 
 
 
-// Put API routes here, before the "catch all" route
+
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
 app.get('/*', (req, res) => {
