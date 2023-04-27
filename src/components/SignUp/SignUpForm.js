@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {signUp} from '../utilities/users-service';
+import {signUp} from '../../utilities/users-service';
 
 function SignUpForm({setUser}) {
   const [formData, setFormData] = useState({
