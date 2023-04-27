@@ -1,9 +1,12 @@
+import styles from './styles.module.css';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {signUp} from '../utilities/users-service';
 
 function SignUpForm({setUser}) {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     confirm: "",
@@ -14,15 +17,13 @@ function SignUpForm({setUser}) {
 
   const handleSubmit = async (e) => { 
     e.preventDefault(); 
-    
     try {
-      console.log(formData)
-      // data to be send to the backend to create a new user
-      const userData = {
+      // console.log(formData)
+      const userData = { // data to be send to the backend to create a new user
         name: formData.name,
         email: formData.email,
-        password: formData.password
-      }
+        password: formData.password,
+      };
       // returns a token with the user info
       const user = await signUp(userData); // user service
       setUser(user);
@@ -37,26 +38,68 @@ function SignUpForm({setUser}) {
   };
 
   return (
-    <div>
-      <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input type="text" name="name" value={formData.name} onChange={handleChange} required/>
-            
-            <label>Email</label>
-            <input type="text" name="email" value={formData.email} onChange={handleChange} required/>
-            
-            <label>password</label>
-            <input type="password" name="password" value={formData.password} onChange={handleChange} required/>
-            
-            <label>Confirm</label>
-            <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required/>
-
-            <button type="submit" disabled={disable}>SIGN UP</button>
-        </form>
+    <div className={styles.signup_container}>
+      <div className={styles.signup_form_container}>
+        <div className={styles.left}>
+          <h1>Welcome Back</h1>
+          <Link to="/login">
+            <button type="button" className={styles.white_btn}>
+              Sign in
+            </button>
+          </Link>
+        </div>
+        <div className={styles.right}>
+          <form className={styles.form_container} onSubmit={handleSubmit}>
+            <h1>Create Account</h1>
+            <input
+              type="text"
+              placeholder="First Name"
+              name="firstName"
+              onChange={handleChange}
+              value={formData.firstName}
+              required
+              className={styles.input}
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="lastName"
+              onChange={handleChange}
+              value={formData.lastName}
+              required
+              className={styles.input}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
+              required
+              className={styles.input}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+              value={formData.password}
+              required
+              className={styles.input}
+            />
+            {formData.error && (
+              <div className={styles.error_msg}>{formData.error}</div>
+            )}
+            <button
+              type="submit"
+              className={styles.green_btn}
+              disabled={disable}
+            >
+              Sing Up
+            </button>
+          </form>
+        </div>
       </div>
-
-      <p className="error-message">{formData.error}</p>
     </div>
   );
 }
