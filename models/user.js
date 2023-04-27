@@ -6,28 +6,32 @@ const bcrypt = require('bcrypt');
 //* determines how much processing time it will take to perform the hash
 const SALT_ROUNDS = 6;  // 6 is a reasonable value
 
-const userSchema = new Schema({
-  name: { type: String, required: true },
-  email: {
-    type: String,
-    unique: true,
-    trim: true,
-    lowercase: true,
-    required: true,
+const userSchema = new Schema(
+  {
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: {
+      type: String,
+      unique: true,
+      trim: true,
+      lowercase: true,
+      required: true,
+    },
+    password: {
+      type: String,
+      trim: true,
+      minLength: 3,
+      required: true,
+    },
   },
-  password: {
-    type: String,
-    trim: true,
-    minLength: 3,
-    required: true,
-  },
-}, {
+  {
     timestamps: true,
-    toJSON: function(doc, ret) {
-        delete ret.password;
-        return ret;
-    }
-});
+    toJSON: function (doc, ret) {
+      delete ret.password;
+      return ret;
+    },
+  }
+);
 
 //* Pre Hook
 userSchema.pre('save', async function(next) {
