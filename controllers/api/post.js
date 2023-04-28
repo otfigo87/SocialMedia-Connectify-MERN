@@ -14,8 +14,25 @@ module.exports.setPosts = async (req, res) => {
 };
 
 //getPosts === Get
+module.exports.getPosts = async (req, res) => {
+  const posts = await Post.find();
+  res.status(200).json(posts);
+};
 
 //editPost === Put (update)
+module.exports.editPost = async (req, res) => {
+  const post = await Post.findById(req.params.id);
+
+  if (!post) {
+    res.status(400).json({ message: "This post does not exist" });
+  }
+
+  const updatePost = await Post.findByIdAndUpdate(post, req.body, {
+    new: true,
+  });
+
+  res.status(200).json(updatePost);
+};
 
 //deletePost === delete
 
