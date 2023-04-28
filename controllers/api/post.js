@@ -35,5 +35,15 @@ module.exports.editPost = async (req, res) => {
 };
 
 //deletePost === delete
+module.exports.deletePost = async (req, res) => {
+  const post = await PostModel.findById(req.params.id);
+
+  if (!post) {
+    res.status(400).json({ message: "Not Found" });
+  }
+
+  await post.deleteOne();
+  res.status(200).json("post deleted" + req.params.id);
+};
 
 //like & dislike
