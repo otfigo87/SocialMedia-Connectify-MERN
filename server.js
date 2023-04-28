@@ -28,8 +28,7 @@ app.use(require('./config/checkToken'));
 
 // * All other routes
 app.use('/api/users', require('./routes/api/users'));
-
-
+app.use('/post',require('./routes/api/post'))
 
 
 // The following "catch all" route (note the *) is necessary

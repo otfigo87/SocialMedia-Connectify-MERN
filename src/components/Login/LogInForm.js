@@ -59,14 +59,15 @@ return (
             className={styles.input}
           />
           {error && <div className={styles.error_msg}>{error}</div>}
-          <button type="submit" className={styles.green_btn}>
-            Sign In
-          </button>
+          
+            <button type="submit" className={styles.green_btn}>
+              Sign In
+            </button>
         </form>
       </div>
       <div className={styles.right}>
         <h1>New Member ?</h1>
-        <Link to="/api/users">
+        <Link to="/signup">
           <button type="button" className={styles.white_btn}>
             Sign Up
           </button>

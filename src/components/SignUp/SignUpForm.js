@@ -41,7 +41,7 @@ function SignUpForm({setUser}) {
       <div className={styles.signUp_form_container}>
         <div className={styles.left}>
           <h1>Welcome to Connectify</h1>
-          <Link to="/api/users/login">
+          <Link to="/">
             <button type="button" className={styles.white_btn}>
               Sign in
             </button>
@@ -86,15 +86,12 @@ function SignUpForm({setUser}) {
               required
               className={styles.input}
             />
-            {formData.error && (
-              <h4>{formData.error}</h4>
-            )}
-            <button
-              type="submit"
-              className={styles.green_btn}
-            >
-              Sign Up
-            </button>
+            {formData.error && <h4>{formData.error}</h4>}
+            <Link to="/">
+              <button type="submit" className={styles.green_btn}>
+                Sign Up
+              </button>
+            </Link>
           </form>
         </div>
       </div>
