@@ -19,6 +19,7 @@ app.use(cors())//enable CORS and allow requests from different origins
 app.use(logger('dev'));
 // JSON payload middleware (for data coming from frontend functions)
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));

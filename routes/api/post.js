@@ -6,7 +6,7 @@ const {
   deletePost,
   likePost,
   dislikePost,
-} = require("../controllers/post.controller");
+} = require("../../controllers/api/post");
 const router = express.Router();
 
 router.get("/", getPosts);

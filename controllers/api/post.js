@@ -34,7 +34,7 @@ module.exports.editPost = async (req, res) => {
   res.status(200).json(updatePost);
 };
 
-//deletePost === delete
+//deletePost === Delete
 module.exports.deletePost = async (req, res) => {
   const post = await Post.findById(req.params.id);
 
@@ -46,12 +46,12 @@ module.exports.deletePost = async (req, res) => {
   res.status(200).json("post deleted" + req.params.id);
 };
 
-//like & dislike
+//like & dislike === Patch
 module.exports.likePost = async function (req, res) {
   try {
     await Post.findByIdAndUpdate(
       req.params.id,
-      { $addToSet: { likers: req.body.userId } },
+      { $addToSet: { likes: req.body.userId } },
       { new: true }
     ).then((data) => res.status(200).send(data));
   } catch (err) {
@@ -63,7 +63,7 @@ module.exports.dislikePost = async function (req, res) {
   try {
     await Post.findByIdAndUpdate(
       req.params.id,
-      { $pull: { likers: req.body.userId } },
+      { $pull: { likes: req.body.userId } },
       { new: true }
     ).then((data) => res.status(200).send(data));
   } catch (err) {
