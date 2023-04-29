@@ -36,7 +36,7 @@ module.exports.editPost = async (req, res) => {
 
 //deletePost === delete
 module.exports.deletePost = async (req, res) => {
-  const post = await PostModel.findById(req.params.id);
+  const post = await Post.findById(req.params.id);
 
   if (!post) {
     res.status(400).json({ message: "Not Found" });
@@ -49,7 +49,7 @@ module.exports.deletePost = async (req, res) => {
 //like & dislike
 module.exports.likePost = async function (req, res) {
   try {
-    await PostModel.findByIdAndUpdate(
+    await Post.findByIdAndUpdate(
       req.params.id,
       { $addToSet: { likers: req.body.userId } },
       { new: true }
@@ -61,7 +61,7 @@ module.exports.likePost = async function (req, res) {
 
 module.exports.dislikePost = async function (req, res) {
   try {
-    await PostModel.findByIdAndUpdate(
+    await Post.findByIdAndUpdate(
       req.params.id,
       { $pull: { likers: req.body.userId } },
       { new: true }
