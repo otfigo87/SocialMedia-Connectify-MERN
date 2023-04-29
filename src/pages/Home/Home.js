@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { logOut } from "../../utilities/users-service";
 import { Link } from "react-router-dom";
+import NewPost from "../../components/NewPost";
+import Thread from "../../components/Thread";
 
 const Home = ({ user, setUser }) => {
   const handleLogOut = () => {
@@ -35,6 +37,9 @@ const Home = ({ user, setUser }) => {
           placeholder="Post Title..."
           onChange={(e) => setSubject(e.target.value)}
         />
+
+        <NewPost subject={subject} user={user}/>
+        <Thread user={user}/> 
       </div>
     </div>
   );
