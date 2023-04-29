@@ -87,11 +87,11 @@ function SignUpForm({setUser}) {
               className={styles.input}
             />
             {formData.error && <h4>{formData.error}</h4>}
-            <Link to="/">
+            
               <button type="submit" className={styles.green_btn}>
                 Sign Up
               </button>
-            </Link>
+           
           </form>
         </div>
       </div>

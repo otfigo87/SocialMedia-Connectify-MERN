@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { logOut } from "../../utilities/users-service";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const Home = ({user, setUser}) => {
-    const handleLogOut = () => {
-      logOut();
-      setUser(null);
-      // window.location.reload();
-    };
+const Home = ({ user, setUser }) => {
+  const handleLogOut = () => {
+    logOut();
+    setUser(null);
+    // window.location.reload();
+  };
+
+  const [subject, setSubject] = useState("");
   return (
     <div className={styles.main_container}>
       <nav className={styles.navbar}>
@@ -23,8 +25,19 @@ const Home = ({user, setUser}) => {
           </button>
         </Link>
       </nav>
+
+      <div>
+        <h3>
+          Hello {user.firstName} {user.lastName}!
+        </h3>
+        <input
+          type="text"
+          placeholder="Post Title..."
+          onChange={(e) => setSubject(e.target.value)}
+        />
+      </div>
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

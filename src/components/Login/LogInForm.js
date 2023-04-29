@@ -67,7 +67,7 @@ return (
       </div>
       <div className={styles.right}>
         <h1>New Member ?</h1>
-        <Link to="/signup">
+        <Link to="/signUp">
           <button type="button" className={styles.white_btn}>
             Sign Up
           </button>

@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import LoginForm from "./components/Login/LogInForm";
 import SignUpForm from "./components/SignUp/SignUpForm";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home/Home";
 
 import { getUser } from "./utilities/users-service";
 
 function App() {
-
   const [user, setUser] = useState(getUser());
   // console.log(user);
 
@@ -20,11 +19,12 @@ function App() {
             exact
             element={<Home user={user} setUser={setUser} />}
           />
+          <Route path="/*" exact element={<Navigate replace to="/" />} />
         </Routes>
       ) : (
         <Routes>
           <Route
-            path="/signup"
+            path="/signUp"
             exact
             element={<SignUpForm setUser={setUser} />}
           />
@@ -34,7 +34,6 @@ function App() {
       )}
     </>
   );
-  
 }
 
 export default App;
