@@ -31,7 +31,7 @@ const Home = ({ user, setUser }) => {
       <div>
         <div className={styles.subject}>
           <h3>
-            Hello {user.firstName} ! Start a Post
+            Hello {user.firstName} ! Start a Post:
           </h3>
           <input
             type="text"

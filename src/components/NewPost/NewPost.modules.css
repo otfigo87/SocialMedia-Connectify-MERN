@@ -4,8 +4,10 @@
   margin: 6px 0;
   padding: 20px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 0 0 black;
-  height: 150px;
+  height: 100px;
 }
 textarea {
   background: none;
@@ -20,8 +22,9 @@ textarea {
 input[type="submit"] {
   border-radius: 10px;
   border: 1px solid rgb(10, 10, 10);
-  margin-left: 4px;
+  margin-left: 10px;
   width: 100px;
+  height: 70%;
   background: rgb(97, 97, 97);
   color: white;
   cursor: pointer;
