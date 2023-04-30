@@ -5,7 +5,7 @@ import LikePost from "../LikePost/LikePost";
 // import { log, timeLog } from "console";
 import styles from  "./Post.module.css";
 
-const Post = ({ post, user }) => {
+const Post = ({ post, user, subject }) => {
 //    console.log(post)
 //   const [isAuthor, setIsAuthor] = useState(false);
 //   const [isEdit, setIsEdit] = useState(false);
@@ -41,8 +41,16 @@ const Post = ({ post, user }) => {
   return (
     <div className={styles.card}>
       <div className={styles.card_header}>
-        <h3>{post.author}</h3>
-        <p>posted: {dateFormater(post.createdAt)}</p>
+        <div>
+          <h3>{post.author} </h3>
+          <h4> {post.message}</h4>
+        </div>
+        
+        <div>
+          <p>posted: {dateFormater(post.createdAt)}</p>
+          <p>{subject}</p>
+        </div>
+        
       </div>
       <div className={styles.icons_part}>
         <LikePost post={post} user={user} />

@@ -17,6 +17,10 @@
   font-size: 1.4rem;
   color: rgb(3, 218, 81);
 }
+.card_header h4 {
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
 .card_header p {
   font-style: italic;
 }
@@ -27,6 +31,6 @@
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
-/* .icons_part {
+.icons_part {
   height: 26px;
-} */
+}

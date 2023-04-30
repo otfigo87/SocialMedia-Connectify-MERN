@@ -13,6 +13,7 @@ const Home = ({ user, setUser }) => {
   };
 
   const [subject, setSubject] = useState("");
+
   return (
     <div className={styles.main_container}>
       <nav className={styles.navbar}>
@@ -41,7 +42,7 @@ const Home = ({ user, setUser }) => {
         </div>
 
         <NewPost subject={subject} user={user} />
-        <Thread user={user} />
+        <Thread user={user} subject={subject}/>
       </div>
     </div>
   );
