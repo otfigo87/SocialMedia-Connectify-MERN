@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { logOut } from "../../utilities/users-service";
 import { Link } from "react-router-dom";
-import NewPost from "../../components/NewPost";
-import Thread from "../../components/Thread";
+import NewPost from "../../components/NewPost/NewPost";
+import Thread from "../../components/Thread/Thread";
 
 const Home = ({ user, setUser }) => {
   const handleLogOut = () => {
