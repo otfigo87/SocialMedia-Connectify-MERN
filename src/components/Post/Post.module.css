@@ -1,0 +1,29 @@
+.card {
+  background: rgb(65, 65, 65);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 10px 0;
+  position: relative;
+  color: white;
+}
+.card_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: rgb(199, 199, 199);
+}
+.card_header h3 {
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  color: rgb(3, 218, 81);
+}
+.card_header p {
+  font-style: italic;
+}
+.card textarea {
+  font-size: 1rem;
+}
+.card > p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
