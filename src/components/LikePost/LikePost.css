@@ -1,0 +1,26 @@
+.like-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 6px;
+  font-size: 1.2rem;
+}
+.like-icon p {
+  color: grey;
+}
+.like-icon span {
+  transform: translate(4px, 1px);
+  cursor: pointer;
+  transition: 0.15s;
+}
+.like-icon span:hover {
+  transform: scale(1.15) translate(4px, 1px);
+}
+#like-btn {
+  color: rgb(3, 218, 81);
+  font-size: 1.2rem;
+}
+#dislike-btn {
+  color: grey;
+  font-size: 1.2rem;
+}
