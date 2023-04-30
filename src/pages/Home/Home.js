@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./styles.module.css";
+import styles from "./Home.module.css";
 import { logOut } from "../../utilities/users-service";
 import { Link } from "react-router-dom";
 import NewPost from "../../components/NewPost/NewPost";
@@ -17,7 +17,7 @@ const Home = ({ user, setUser }) => {
     <div className={styles.main_container}>
       <nav className={styles.navbar}>
         <h1>
-          Connectify <span>Welcome, {user.firstName}</span>
+          Connectify, <span>Welcome Back</span>
         </h1>
         <button className={styles.white_btn}>News</button>
         <button className={styles.white_btn}>Events</button>
@@ -29,17 +29,19 @@ const Home = ({ user, setUser }) => {
       </nav>
 
       <div>
-        <h3>
-          Hello {user.firstName} {user.lastName}!
-        </h3>
-        <input
-          type="text"
-          placeholder="Post Title..."
-          onChange={(e) => setSubject(e.target.value)}
-        />
+        <div className={styles.subject}>
+          <h3>
+            Hello {user.firstName} ! Start a Post
+          </h3>
+          <input
+            type="text"
+            placeholder="Post Title..."
+            onChange={(e) => setSubject(e.target.value)}
+          />
+        </div>
 
-        <NewPost subject={subject} user={user}/>
-        <Thread user={user}/> 
+        <NewPost subject={subject} user={user} />
+        <Thread user={user} />
       </div>
     </div>
   );

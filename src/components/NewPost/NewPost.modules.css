@@ -1,0 +1,36 @@
+.new-post-container {
+  background: rgb(19, 19, 19);
+  border-radius: 10px;
+  margin: 6px 0;
+  padding: 20px;
+  display: flex;
+  box-shadow: 0 0 0 black;
+  height: 150px;
+}
+textarea {
+  background: none;
+  resize: none;
+  border: 1px solid grey;
+  width: 60%;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+input[type="submit"] {
+  border-radius: 10px;
+  border: 1px solid rgb(10, 10, 10);
+  margin-left: 4px;
+  width: 100px;
+  background: rgb(97, 97, 97);
+  color: white;
+  cursor: pointer;
+  transition: 0.15s;
+  letter-spacing: 1px;
+  font-size: 1.02rem;
+}
+input[type="submit"]:hover {
+  transform: translateX(-2px);
+  filter: brightness(120%);
+  color: rgb(3, 218, 81);
+}

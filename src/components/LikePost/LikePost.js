@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const LikePost = ({ post, user }) => {
+    
   const [userLiked, setUserLiked] = useState(false);
 
   useEffect(() => {

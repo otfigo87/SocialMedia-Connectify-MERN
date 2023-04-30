@@ -25,3 +25,26 @@
 	cursor: pointer;
 	margin-right: 20px;
 }
+
+.subject{
+  display: flex;
+  background: rgb(19, 19, 19);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.subject h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+.subject input {
+  width: 200px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: rgb(3, 218, 81);
+  margin-left: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  outline: none;
+}

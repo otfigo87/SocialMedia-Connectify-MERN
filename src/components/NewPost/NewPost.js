@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
+import './NewPost.modules.css';
 
 const NewPost = ({subject, user}) => {
 
@@ -16,7 +17,7 @@ const NewPost = ({subject, user}) => {
     };
 
   return (
-    <div>
+    <>
       <form onSubmit={(e) => handleForm(e)} className="new-post-container">
         <textarea
           placeholder="what's up ?"
@@ -25,7 +26,7 @@ const NewPost = ({subject, user}) => {
         ></textarea>
         <input type="submit" value="Send" />
       </form>
-    </div>
+    </>
   );
 }
 
