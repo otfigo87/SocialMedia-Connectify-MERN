@@ -1,7 +1,7 @@
 // import axios from "axios";
 // import React, { useEffect, useState } from "react";
 // import DeletePost from "./DeletePost";
-// import LikePost from "./LikePost";
+import LikePost from "../LikePost/LikePost";
 // import { log, timeLog } from "console";
 
 const Post = ({ post, user }) => {
@@ -43,7 +43,44 @@ const Post = ({ post, user }) => {
         <h3>{post.author}</h3>
         <p>posted: {dateFormater(post.createdAt)}</p>
       </div>
-      
+      <div className="icons-part">
+        <LikePost post={post} user={user} />
+      </div>  
+      {/* {isEdit ? (
+        <div className="edit-container">
+          <textarea
+            defaultValue={newMessage ? newMessage : post.message}
+            onChange={(e) => setNewMessage(e.target.value)}
+          ></textarea>
+          <button
+            onClick={() => {
+              handleEdit();
+              setIsEdit(false);
+            }}
+          >
+            Valider édition
+          </button>
+        </div>
+      ) : (
+        <p>{newMessage ? newMessage : post.message}</p>
+      )} */}
+      {/* <div className="icons-part">
+        <LikePost post={post} user={user} />
+        {isAuthor && (
+          <div className="update-delete-icons">
+            <span
+              id="update-btn"
+              onClick={() => {
+                handleEdit();
+                setIsEdit(!isEdit);
+              }}
+            >
+              &#10000;
+            </span>
+            <DeletePost postId={post._id} />
+          </div>
+        )}
+      </div> */}
     </div>
   );
 };

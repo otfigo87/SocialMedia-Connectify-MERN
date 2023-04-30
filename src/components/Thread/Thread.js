@@ -9,7 +9,8 @@ const Thread = ({ user }) => {
     axios.get("http://localhost:3001/post/")
     .then((res) => setPosts(res.data));
   }, []);
-  console.log(posts)
+  // console.log(posts)
+  // console.log(user)
 
   return (
     <div className="thread-container">
