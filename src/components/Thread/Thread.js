@@ -15,7 +15,7 @@ const Thread = ({ user }) => {
     <div className="thread-container">
       
       {posts
-        // .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+        .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
         .map((post) => (  
           <Post key={post._id} post={post} user={user} />
         ))}
