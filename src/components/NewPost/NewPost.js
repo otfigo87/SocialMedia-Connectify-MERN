@@ -20,7 +20,7 @@ const NewPost = ({subject, user}) => {
     <>
       <form onSubmit={(e) => handleForm(e)} className="new-post-container">
         <textarea
-          placeholder="what's up ?"
+          placeholder="What's on your mind?"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
         ></textarea>
