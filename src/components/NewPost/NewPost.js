@@ -2,9 +2,10 @@ import {useState} from 'react';
 import axios from 'axios';
 import './NewPost.modules.css';
 
-const NewPost = ({subject, user}) => {
+const NewPost = ({user}) => {
 
     const [message, setMessage] = useState("");
+    const [subject, setSubject] = useState("");
 
     const handleForm = (e) => {
       e.preventDefault();
@@ -20,6 +21,14 @@ const NewPost = ({subject, user}) => {
 
   return (
     <>
+        <div className="subject">
+          <h3>Hello {user.firstName}! Share Your Opinion:</h3>
+          <input
+            type="text"
+            placeholder="Subject"
+            onChange={(e) => setSubject(e.target.value)}
+          />
+        </div>
       <form onSubmit={(e) => handleForm(e)} className="new-post-container">
         <textarea
           placeholder="What's on your mind?"

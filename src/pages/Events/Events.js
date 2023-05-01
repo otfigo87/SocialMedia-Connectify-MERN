@@ -1,9 +1,11 @@
-import React from 'react'
+import Navbar from "../../components/Navbar/Navbar";
 
-const Events = () => {
+const Events = ({ setUser }) => {
   return (
-    <div>Events</div>
-  )
-}
+    <>
+      <Navbar />
+    </>
+  );
+};
 
-export default Events
+export default Events;
