@@ -40,7 +40,7 @@ function SignUpForm({setUser}) {
     <div className={styles.signUp_container}>
       <div className={styles.signUp_form_container}>
         <div className={styles.left}>
-          <h1>Welcome to Connectify</h1>
+          <h1>Connectify</h1>
           <Link to="/">
             <button type="button" className={styles.white_btn}>
               Sign in
