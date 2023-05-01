@@ -9,6 +9,7 @@ module.exports.setPosts = async (req, res) => {
   const post = await Post.create({
     message: req.body.message,
     author: req.body.author,
+    subject: req.body.subject
   });
   res.status(200).json(post);
 };

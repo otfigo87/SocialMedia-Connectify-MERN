@@ -9,7 +9,6 @@ const Home = ({ user, setUser }) => {
   const handleLogOut = () => {
     logOut();
     setUser(null);
-    // window.location.reload();
   };
 
   const [subject, setSubject] = useState("");
@@ -42,7 +41,7 @@ const Home = ({ user, setUser }) => {
         </div>
 
         <NewPost subject={subject} user={user} />
-        <Thread user={user} subject={subject}/>
+        <Thread user={user} />
       </div>
     </div>
   );

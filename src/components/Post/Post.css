@@ -52,7 +52,7 @@
 }
 
 #update-btn {
-  right: 42px;
+  right: 50px;
 }
 
 .update-delete-icons span {
@@ -62,8 +62,8 @@
   cursor: pointer;
   transition: 0.15s;
 }
-#update-btn:hover,
-#delete-btn:hover {
+#update-btn:hover{
   filter: brightness(250%);
   transform: translateX(1px) rotate(25deg);
+  color: green;
 }

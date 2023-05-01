@@ -11,9 +11,11 @@ const NewPost = ({subject, user}) => {
 
       axios.post("http://localhost:3001/post/", {
         message,
+        subject,
         author: user.firstName,
       });
       setMessage("");
+      window.location.reload();
     };
 
   return (

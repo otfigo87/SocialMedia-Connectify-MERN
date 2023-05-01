@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import LoginForm from "./components/Login/LogInForm";
 import SignUpForm from "./components/SignUp/SignUpForm";
 import Home from "./pages/Home/Home";
+import './App.css';
 
 import { getUser } from "./utilities/users-service";
 

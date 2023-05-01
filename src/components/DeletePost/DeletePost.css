@@ -7,4 +7,5 @@
 #delete-btn:hover {
   filter: brightness(250%);
   transform: translateX(1px) rotate(25deg);
+  color: red;
 }

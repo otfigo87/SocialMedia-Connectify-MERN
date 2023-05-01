@@ -5,7 +5,7 @@ import LikePost from "../LikePost/LikePost";
 
 import "./Post.css";
 
-const Post = ({ post, user, subject }) => {
+const Post = ({ post, user }) => {
 
   const [isAuthor, setIsAuthor] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
@@ -21,7 +21,7 @@ const Post = ({ post, user, subject }) => {
 
   const handleEdit = () => {
     if (newMessage) {
-      axios.put("http://localhost:3100/post/" + post._id, {
+      axios.put("http://localhost:3001/post/" + post._id, {
         message: newMessage,
       });
     }
@@ -41,7 +41,9 @@ const Post = ({ post, user, subject }) => {
   return (
     <div className="card">
       <div className="card_header">
-        <h3>{post.author}</h3>
+        <h3>
+          {post.author} <span className="sbj">-- {post.subject}</span>
+        </h3>
         <p>posted on {dateFormater(post.createdAt)}</p>
       </div>
       {isEdit ? (

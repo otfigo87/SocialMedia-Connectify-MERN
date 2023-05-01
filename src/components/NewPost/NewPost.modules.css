@@ -37,3 +37,8 @@ input[type="submit"]:hover {
   filter: brightness(120%);
   color: rgb(3, 218, 81);
 }
+.sbj {
+  color: grey;
+  font-size: 1.1rem;
+  font-style: italic;
+}
