@@ -13,7 +13,7 @@ export function getToken() {
     if (!token) return null;
 
     const payload = JSON.parse(atob(token.split('.')[1]));
-    console.log(payload);
+    // console.log(payload);
 
     // if token is expired
     if (payload.exp < Date.now() / 1000) {

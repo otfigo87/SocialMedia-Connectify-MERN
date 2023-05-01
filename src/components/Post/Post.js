@@ -1,31 +1,31 @@
-// import axios from "axios";
-// import React, { useEffect, useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 // import DeletePost from "./DeletePost";
 import LikePost from "../LikePost/LikePost";
 // import { log, timeLog } from "console";
-import styles from  "./Post.module.css";
+import "./Post.css";
 
 const Post = ({ post, user, subject }) => {
-//    console.log(post)
-//   const [isAuthor, setIsAuthor] = useState(false);
-//   const [isEdit, setIsEdit] = useState(false);
-//   const [newMessage, setNewMessage] = useState("");
 
-//   useEffect(() => {
-//     if (post.author === userId) {
-//       setIsAuthor(true);
-//     } else {
-//       setIsAuthor(false);
-//     }
-//   }, [userId]);
+  const [isAuthor, setIsAuthor] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
+  const [newMessage, setNewMessage] = useState("");
 
-//   const handleEdit = () => {
-//     if (newMessage) {
-//       axios.put("http://localhost:5600/post/" + post._id, {
-//         message: newMessage,
-//       });
-//     }
-//   };
+  useEffect(() => {
+    if (post.author === user.firstName) {
+      setIsAuthor(true);
+    } else {
+      setIsAuthor(false);
+    }
+  }, [user]);
+
+  const handleEdit = () => {
+    if (newMessage) {
+      axios.put("http://localhost:5600/post/" + post._id, {
+        message: newMessage,
+      });
+    }
+  };
 
   const dateFormater = (date) => {
     return new Date(date).toLocaleDateString("en-US", {
@@ -39,23 +39,12 @@ const Post = ({ post, user, subject }) => {
   };
 
   return (
-    <div className={styles.card}>
-      <div className={styles.card_header}>
-        <div>
-          <h3>{post.author} </h3>
-          <h4> {post.message}</h4>
-        </div>
-        
-        <div>
-          <p>posted: {dateFormater(post.createdAt)}</p>
-          <p>{subject}</p>
-        </div>
-        
+    <div className="card">
+      <div className="card_header">
+        <h3>{post.author}</h3>
+        <p>posted on {dateFormater(post.createdAt)}</p>
       </div>
-      <div className={styles.icons_part}>
-        <LikePost post={post} user={user} />
-      </div>  
-      {/* {isEdit ? (
+      {isEdit ? (
         <div className="edit-container">
           <textarea
             defaultValue={newMessage ? newMessage : post.message}
@@ -72,8 +61,8 @@ const Post = ({ post, user, subject }) => {
         </div>
       ) : (
         <p>{newMessage ? newMessage : post.message}</p>
-      )} */}
-      {/* <div className="icons-part">
+      )}
+      <div className="icons_part">
         <LikePost post={post} user={user} />
         {isAuthor && (
           <div className="update-delete-icons">
@@ -86,10 +75,10 @@ const Post = ({ post, user, subject }) => {
             >
               &#10000;
             </span>
-            <DeletePost postId={post._id} />
+            {/* <DeletePost postId={post._id} /> */}
           </div>
         )}
-      </div> */}
+      </div>
     </div>
   );
 };
