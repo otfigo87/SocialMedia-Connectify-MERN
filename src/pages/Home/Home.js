@@ -14,7 +14,7 @@ const Home = ({ user, setUser }) => {
   const [subject, setSubject] = useState("");
 
   return (
-    <div className={styles.main_container}>
+    <>
       <nav className={styles.navbar}>
         <h1>
           Connectify, <span>Welcome Back</span>
@@ -43,7 +43,7 @@ const Home = ({ user, setUser }) => {
         <NewPost subject={subject} user={user} />
         <Thread user={user} />
       </div>
-    </div>
+    </>
   );
 };
 

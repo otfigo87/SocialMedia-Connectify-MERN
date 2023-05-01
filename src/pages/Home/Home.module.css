@@ -1,16 +1,16 @@
 .navbar {
 	width: 100%;
-	height: 70px;
-	background-color: #3bb19b;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .navbar h1 {
-	color: white;
+	color: #00DA50;
 	font-size: 25px;
 	margin-left: 20px;
+	letter-spacing: 2px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .white_btn {
@@ -24,6 +24,11 @@
 	font-size: 14px;
 	cursor: pointer;
 	margin-right: 20px;
+}
+
+.white_btn:hover {
+	color: #3f875a;
+	transform: translateX(2px);
 }
 
 .subject{
