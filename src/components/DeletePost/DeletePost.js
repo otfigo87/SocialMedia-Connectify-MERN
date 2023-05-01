@@ -6,7 +6,7 @@ const DeletePost = ({ postId }) => {
     // console.log(postId)
 
   const handleDelete = () => {
-    axios.delete("http://localhost:3100/post/" + postId);
+    axios.delete("http://localhost:3001/post/" + postId);
   };
 
   return (

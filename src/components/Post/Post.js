@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DeletePost from "../DeletePost/DeletePost";
 import LikePost from "../LikePost/LikePost";
-// import { log, timeLog } from "console";
+
 import "./Post.css";
 
 const Post = ({ post, user, subject }) => {
