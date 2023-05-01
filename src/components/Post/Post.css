@@ -34,3 +34,41 @@
 .icons_part {
   height: 30px;
 }
+.edit-container {
+  display: flex;
+}
+.edit-container button {
+  border-radius: 10px;
+  border: none;
+  margin-left: 5px;
+  width: 120px;
+  background: rgb(225, 224, 224);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.edit-container button:hover {
+  transform: translateX(-2px);
+  filter: brightness(120%);
+}
+
+#update-btn {
+  right: 42px;
+}
+#delete-btn {
+  right: 14px;
+  bottom: 5px;
+  transform: rotate(45deg);
+  font-size: 1.45rem;
+}
+.update-delete-icons span {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 8px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+#update-btn:hover,
+#delete-btn:hover {
+  filter: brightness(250%);
+  transform: translateX(1px) rotate(25deg);
+}
