@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-// import DeletePost from "./DeletePost";
+import DeletePost from "../DeletePost/DeletePost";
 import LikePost from "../LikePost/LikePost";
 // import { log, timeLog } from "console";
 import "./Post.css";
@@ -21,7 +21,7 @@ const Post = ({ post, user, subject }) => {
 
   const handleEdit = () => {
     if (newMessage) {
-      axios.put("http://localhost:5600/post/" + post._id, {
+      axios.put("http://localhost:3100/post/" + post._id, {
         message: newMessage,
       });
     }
@@ -56,7 +56,7 @@ const Post = ({ post, user, subject }) => {
               setIsEdit(false);
             }}
           >
-            Valider édition
+            Edit
           </button>
         </div>
       ) : (
@@ -75,7 +75,7 @@ const Post = ({ post, user, subject }) => {
             >
               &#10000;
             </span>
-            {/* <DeletePost postId={post._id} /> */}
+            <DeletePost postId={post._id} />
           </div>
         )}
       </div>
