@@ -54,12 +54,7 @@
 #update-btn {
   right: 42px;
 }
-#delete-btn {
-  right: 14px;
-  bottom: 5px;
-  transform: rotate(45deg);
-  font-size: 1.45rem;
-}
+
 .update-delete-icons span {
   font-size: 1.2rem;
   position: absolute;

@@ -1,0 +1,10 @@
+#delete-btn {
+  right: 14px;
+  bottom: 5px;
+  transform: rotate(45deg);
+  font-size: 1.45rem;
+}
+#delete-btn:hover {
+  filter: brightness(250%);
+  transform: translateX(1px) rotate(25deg);
+}
