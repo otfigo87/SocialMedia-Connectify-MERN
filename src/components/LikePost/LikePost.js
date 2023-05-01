@@ -8,7 +8,7 @@ const LikePost = ({ post, user }) => {
 
   useEffect(() => {
     if (post.likes) {
-      if (post.likes.includes(user)) {
+      if (post.likes.includes(user._id)) {
         setUserLiked(true);
       } else {
         setUserLiked(false);
@@ -17,17 +17,16 @@ const LikePost = ({ post, user }) => {
   }, [user]);
 
   const likePost = () => {
-    axios.patch("http://localhost:3001/post/like-post/" + post._id, { user });
+    axios.patch("http://localhost:3001/post/like-post/" + post._id, { likes: user._id });
     setUserLiked(true);
   };
 
   const dislikePost = () => {
-    axios.patch("http://localhost:3001/post/dislike-post/" + post._id, {
-      user,
-    });
+    axios.patch("http://localhost:3001/post/dislike-post/" + post._id, { likes: user._id });
     setUserLiked(false);
   };
-
+console.log(post._id)
+console.log(user._id)
   return (
     <div className="like-icon">
       <p>{post.likes ? post.likes.length : 0}</p>
