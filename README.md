@@ -14,4 +14,24 @@ So whether you're looking to catch up with old friends, share your latest advent
 
 **Server:** Node, Express, Mongoose, MongoDB, JWT, dotenv, Bcrypt, Cors, Morgan, serve-favicon.
 
+## API Reference
 
+#### Get all posts
+
+```http
+  GET /api/posts
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  `string` | **Required**. login/signUp |
+
+#### Get News / Events
+
+```http
+  GET /news
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `query`   | `string` | **Required**. Your API key |
