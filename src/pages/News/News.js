@@ -12,15 +12,15 @@ const News = () => {
   const [newsData, setNewsData] = useState([]);
   const [search, setSearch] = useState("sport");
 
+  const apiKey = process.env.REACT_APP_API_KEY;
+
   useEffect(() => {
     axios
-      .get(
-        `https://newsapi.org/v2/everything?q=${search}&apiKey=ecaf815c34b84262a7b8f865949b004d`
-      )
+      .get(`https://newsapi.org/v2/everything?q=${search}&apiKey=${apiKey}`)
       .then((res) => setNewsData(res.data.articles));
   }, [search])
 
-  console.log(newsData)
+  // console.log(newsData)
 
   return (
     <>
