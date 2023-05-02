@@ -8,3 +8,10 @@ I've built this app using the latest technologies and best practices, so you can
 
 So whether you're looking to catch up with old friends, share your latest adventure, or discover new interests and communities, my social media app has everything you need. Try it today and see for yourself!
 
+## Tech Stack
+
+**Client:** React, Redux, CSS, API (Axios), React-dom, React-router-dom.
+
+**Server:** Node, Express, Mongoose, MongoDB, JWT, dotenv, Bcrypt, Cors, Morgan, serve-favicon.
+
+
