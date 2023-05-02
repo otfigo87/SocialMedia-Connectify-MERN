@@ -56,7 +56,7 @@ https://eventsapi.org
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`API_KEY` for the News API
-`ANOTHER_API_KEY` for the Events API
-`DATABASE_URL` to connect your database
-`JWT_SECRET` for the jsonwebtoken
+`API_KEY` for the News API   
+`ANOTHER_API_KEY` for the Events API    
+`DATABASE_URL` to connect your database    
+`JWT_SECRET` for the jsonwebtoken    
