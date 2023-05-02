@@ -22,7 +22,7 @@ const NewPost = ({user}) => {
   return (
     <>
         <div className="subject">
-          <h3>Hello {user.firstName}! Share Your Opinion:</h3>
+          <h3>Hello {user.firstName}! Your Opinion about:</h3>
           <input
             type="text"
             placeholder="Subject"
