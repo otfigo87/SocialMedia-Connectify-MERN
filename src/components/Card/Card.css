@@ -6,17 +6,19 @@
   background: #50705dd2;
   border-radius: 35px;
   margin: 5px;
-  padding: 26px 15px 30px;
+  padding: 15px;
   position: relative;
   overflow: hidden;
-   color: rgb(140, 133, 133);
+  color: rgb(42, 35, 35);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 2px;
 }
 .article::after {
     content: "";
     position: absolute;
     height: 90px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(195, 34, 34, 0) 0%, rgb(159, 156, 156) 55%);
+    background: linear-gradient(180deg, rgba(67, 190, 30, 0) 0%, rgb(173, 156, 156) 55%);
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
@@ -36,11 +38,14 @@ img {
   }
 
   .article > p {
-    color: white;
+    color: rgb(78, 47, 31);
     font-size: 1.3rem;
     line-height: 20px;
     height: 160px;
     overflow-y: scroll;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+    line-height: 23px;
   }
 
  p::-webkit-scrollbar {
@@ -48,21 +53,23 @@ img {
  }
   
 .btn {
-    background: #546fe4;
+    background: #55a276;
     position: absolute;
-    bottom: 16px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     padding: 14px 0;
-    width: 150px;
+    width: 200px;
     text-align: center;
     border-radius: 15px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.5s;
     z-index: 50;
+    border: solid 1px gray;
 }
 .btn:hover {
     background: #212040;
-      box-shadow: 0 0 10px #546ee4d2;
+      box-shadow: 0 0 10px #364483d2;
       font-size: 1.025rem;
+      color: white;
 }

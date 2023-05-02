@@ -9,7 +9,7 @@ const Card = ({article}) => {
       {article.publishedAt ? <h5>released: {article.publishedAt}</h5> : null}
       <h5>By: {article.author}</h5>
       <p>{article.description}</p>
-      <button className="btn">Read more and Discuss</button>
+      <a href={article.url}><button className="btn">Read more and Discuss</button></a>
     </div>
   );
 }
