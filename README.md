@@ -20,16 +20,29 @@ So whether you're looking to catch up with old friends, share your latest advent
 
 ```http
   GET /api/posts
+  Express Server
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 |  `string` | **Required**. login/signUp |
 
-#### Get News & Events
+#### Get News
+https://newsapi.org
 
 ```http
   GET /news
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `query`   | `string` | **Required**. Your API key |
+
+#### Get Events
+https://eventsapi.org
+
+```http
+  GET /events
 ```
 
 | Parameter | Type     | Description                       |
