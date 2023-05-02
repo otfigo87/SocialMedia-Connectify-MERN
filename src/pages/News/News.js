@@ -18,7 +18,7 @@ const News = () => {
     axios
       .get(`https://newsapi.org/v2/everything?q=${search}&apiKey=${apiKey}`)
       .then((res) => setNewsData(res.data.articles));
-  }, [search])
+  }, [search, apiKey])
 
   // console.log(newsData)
 
