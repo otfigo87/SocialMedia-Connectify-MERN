@@ -23,9 +23,10 @@ So whether you're looking to catch up with old friends, share your latest advent
   Express Server
 ```
 
-| Parameter | Type     | Description                      |
-| :-------- | :------- | CRUD Operations   -------------  |
-|  `string`            | **Required**. login/signUp       |
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `CRUD`    | `string` | **Required**. Login/SignUp        |
+
 
 #### Get News
 https://newsapi.org
