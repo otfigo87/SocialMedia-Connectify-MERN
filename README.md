@@ -26,7 +26,7 @@ So whether you're looking to catch up with old friends, share your latest advent
 | :-------- | :------- | :------------------------- |
 |  `string` | **Required**. login/signUp |
 
-#### Get News / Events
+#### Get News & Events
 
 ```http
   GET /news
