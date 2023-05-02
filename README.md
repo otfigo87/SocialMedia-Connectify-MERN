@@ -50,7 +50,7 @@ https://eventsapi.org
 | `query`   | `string` | **Required**. Your API key |
 
 
-![diagram](/public/Diagram.drawio.png)
+![diagram](/public/Diagram.drawio.svg)
 
 ## Environment Variables
 
