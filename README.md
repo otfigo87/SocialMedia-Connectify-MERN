@@ -23,9 +23,9 @@ So whether you're looking to catch up with old friends, share your latest advent
   Express Server
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-|  `string` | **Required**. login/signUp |
+| Parameter | Type     | Description                      |
+| :-------- | :------- | CRUD Operations   -------------  |
+|  `string`            | **Required**. login/signUp       |
 
 #### Get News
 https://newsapi.org
@@ -48,3 +48,15 @@ https://eventsapi.org
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `query`   | `string` | **Required**. Your API key |
+
+
+![diagram](/public/Diagram.drawio.png)
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY` for the News API
+`ANOTHER_API_KEY` for the Events API
+`DATABASE_URL` to connect your database
+`JWT_SECRET` for the jsonwebtoken
