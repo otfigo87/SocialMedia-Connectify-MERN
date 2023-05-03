@@ -17,7 +17,6 @@ So whether you're looking to catch up with old friends, share your latest advent
 ## Sketches / ERD
 
 ![Sketch](/public/login.jpg)
-![Sketch](/public/Home.jpg)
 ![Sketch](/public/News.jpg)
 ![diagram](/public/Diagram.drawio.png)
 
