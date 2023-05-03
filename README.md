@@ -70,7 +70,7 @@ To run this project locally, you will need to add the following environment vari
 ## 🔗 Links
 
 Trello board: [Trello](https://trello.com/b/tGMI0GEv/connectify-final-project)   
-Deployed app on Heroku: [Connectify](https://www.myawesomeapp.com/)
+Deployed app on Heroku: [Connectify](https://connectifly.herokuapp.com)
 
 ## Unsolved Problems
 
