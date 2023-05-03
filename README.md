@@ -66,3 +66,10 @@ To run this project, you will need to add the following environment variables to
 `ANOTHER_API_KEY` for the Events API    
 `DATABASE_URL` to connect your database    
 `JWT_SECRET` for the jsonwebtoken    
+
+## 🔗 Links
+
+Trello board: [My Awesome App](https://trello.com/b/tGMI0GEv/connectify-final-project)   
+Deployed app on Heroku: (https://www.myawesomeapp.com/)
+
+
