@@ -17,16 +17,18 @@ const LikePost = ({ post, user }) => {
   }, [user]);
 
   const likePost = () => {
-    axios.patch("http://localhost:3001/post/like-post/" + post._id, { likes: user._id });
+    axios.patch("http://localhost:3001/post/like-post/" + post._id, { userId: user._id });
     setUserLiked(true);
+    // window.location.reload();
   };
 
   const dislikePost = () => {
-    axios.patch("http://localhost:3001/post/dislike-post/" + post._id, { likes: user._id });
+    axios.patch("http://localhost:3001/post/dislike-post/" + post._id, { userId: user._id });
     setUserLiked(false);
+    // window.location.reload();
   };
-console.log(post._id)
-console.log(user._id)
+// console.log(post._id)
+// console.log(user._id)
   return (
     <div className="like-icon">
       <p>{post.likes ? post.likes.length : 0}</p>
