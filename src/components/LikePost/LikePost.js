@@ -14,7 +14,7 @@ const LikePost = ({ post, user }) => {
         setUserLiked(false);
       }
     }
-  }, [user]);
+  }, [user, post.likes]);
 
   const likePost = () => {
     axios.patch("http://localhost:3001/post/like-post/" + post._id, { userId: user._id });
