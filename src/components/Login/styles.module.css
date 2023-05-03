@@ -101,10 +101,21 @@
 	font-size: 14px;
 	cursor: pointer;
     color: #3bb19b;
+	transition: 1s ease-in-out;
 }
 
 .green_btn {
 	background-color: #3bb19b;
 	color: white;
 	margin: 10px;
+	
+}
+.green_btn:hover {
+	color: grey;
+	background-color: rgb(236,245,243);
+	transform:scale(1.1)
+}
+.white_btn:hover {
+	color: grey;
+	transform:scale(1.1)
 }
