@@ -10,7 +10,7 @@ import "./News.css";
 const News = () => {
   
   const [newsData, setNewsData] = useState([]);
-  const [search, setSearch] = useState("sport");
+  const [search, setSearch] = useState("face");
 
   const apiKey = process.env.REACT_APP_API_KEY;
 

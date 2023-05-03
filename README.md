@@ -14,6 +14,14 @@ So whether you're looking to catch up with old friends, share your latest advent
 
 **Server:** Node, Express, Mongoose, MongoDB, JWT, dotenv, Bcrypt, Cors, Morgan, serve-favicon.
 
+## Sketches / ERD
+
+![Sketch](/public/login.jpg)
+![Sketch](/public/Home.jpg)
+![Sketch](/public/News.jpg)
+![diagram](/public/Diagram.drawio.png)
+
+
 ## API Reference
 
 #### Get all posts
@@ -50,8 +58,6 @@ https://eventsapi.org
 | :-------- | :------- | :-------------------------------- |
 | `query`   | `string` | **Required**. Your API key |
 
-
-![diagram](/public/Diagram.drawio.png)
 
 ## Environment Variables
 
