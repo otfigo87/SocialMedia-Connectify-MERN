@@ -60,7 +60,7 @@ https://eventsapi.org
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project locally, you will need to add the following environment variables to your .env file
 
 `API_KEY` for the News API   
 `ANOTHER_API_KEY` for the Events API    
@@ -69,7 +69,20 @@ To run this project, you will need to add the following environment variables to
 
 ## 🔗 Links
 
-Trello board: [My Awesome App](https://trello.com/b/tGMI0GEv/connectify-final-project)   
-Deployed app on Heroku: (https://www.myawesomeapp.com/)
+Trello board: [Trello](https://trello.com/b/tGMI0GEv/connectify-final-project)   
+Deployed app on Heroku: [Connectify](https://www.myawesomeapp.com/)
+
+## Unsolved Problems
+
+Using Redux as a state management, There are several benefits to using Redux for state management in a React application. These benefits include: Centralized State Management: Redux provides a centralized state management system that can be accessed by all components. This makes it easier to manage state in large applications.   
+
+## Future Enhancements
+
+Include multi-user, real-time communications (Chat)
+
+## Feedback
+
+If you have any feedback, please reach out to me at aaotmane@gmail.com
+
 
 
