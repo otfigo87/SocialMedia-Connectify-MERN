@@ -5,7 +5,7 @@ import SignUpForm from "./components/SignUp/SignUpForm";
 import Home from "./pages/Home/Home";
 import Events from "./pages/Events/Events";
 import News from "./pages/News/News";
-import './App.css';
+import "./App.css";
 
 import { getUser } from "./utilities/users-service";
 

@@ -5,8 +5,6 @@ import Card from '../../components/Card/Card';
 import "./News.css";
 
 
-
-
 const News = () => {
   
   const [newsData, setNewsData] = useState([]);
