@@ -80,6 +80,13 @@ Using Redux as a state management, There are several benefits to using Redux for
 
 Include multi-user, real-time communications (Chat)
 
+## Screenshots
+
+![login page](/public/loginSignUp.png)
+![home page](/public/main.png)
+![news page](/public/articles.png)
+
+
 ## Feedback
 
 If you have any feedback, please reach out to me at aaotmane@gmail.com
